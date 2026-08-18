@@ -428,6 +428,12 @@ h3 {
   transform-origin: left;
 }
 
+.hero::after,
+.audiences::before,
+.audiences::after {
+  display: none;
+}
+
 .audience-grid {
   display: grid;
   margin: 0;
