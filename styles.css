@@ -782,6 +782,87 @@ h3 {
   font-weight: 700;
 }
 
+.company-details {
+  padding-block: clamp(48px, 7vw, 92px);
+  background: #202326;
+  color: white;
+}
+
+.company-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+  gap: clamp(34px, 6vw, 84px);
+  border: 2px solid var(--signal);
+  padding: clamp(28px, 5vw, 64px);
+  background: var(--ink);
+  box-shadow: 12px 12px 0 rgb(255 196 0 / 18%);
+}
+
+.company-card__heading h2 {
+  margin-bottom: 22px;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+}
+
+.company-card__name {
+  max-width: 430px;
+  margin: 0;
+  color: var(--signal);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.company-card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid rgb(255 255 255 / 22%);
+}
+
+.company-card__grid > div {
+  min-width: 0;
+  border-bottom: 1px solid rgb(255 255 255 / 22%);
+  padding: 18px 20px 18px 0;
+}
+
+.company-card__grid > div:nth-child(even) {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.company-card__grid > .company-card__wide {
+  grid-column: 1 / -1;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.company-card__grid dt {
+  margin-bottom: 5px;
+  color: #aeb2af;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.company-card__grid dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.42;
+}
+
+.company-card__grid a {
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.company-card__grid a:hover {
+  color: var(--signal);
+}
+
 .site-footer {
   border-top: 5px solid var(--signal);
   padding-block: 42px;
@@ -1013,6 +1094,10 @@ h3 {
     box-shadow: 10px 10px 0 rgb(17 19 21 / 8%);
   }
 
+  .company-card {
+    grid-template-columns: 1fr;
+  }
+
   .footer-layout {
     display: grid;
   }
@@ -1042,6 +1127,17 @@ h3 {
   .brand-name {
     max-width: 150px;
     font-size: 0.72rem;
+  }
+
+  .company-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-card__grid > div,
+  .company-card__grid > div:nth-child(even) {
+    grid-column: 1;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .menu-toggle > span:first-child {
