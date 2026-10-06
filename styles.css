@@ -954,6 +954,13 @@ h3 {
   gap: 14px;
 }
 
+.footer-company-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
 .footer-actions {
   display: grid;
   justify-items: end;
@@ -982,6 +989,100 @@ h3 {
 .company-details-button:hover {
   background: var(--signal);
   color: var(--ink);
+}
+
+.privacy-policy-link {
+  color: white;
+  font-size: 0.86rem;
+  text-decoration-line: underline;
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.privacy-policy-link:hover {
+  color: var(--signal);
+}
+
+.legal-page {
+  background: white;
+}
+
+.legal-header {
+  position: static;
+}
+
+.legal-header .header-shell {
+  min-height: var(--header-height);
+}
+
+.legal-main {
+  padding-block: 64px 90px;
+}
+
+.legal-document {
+  width: min(calc(100% - 48px), 880px);
+  margin-inline: auto;
+  padding: 56px clamp(28px, 6vw, 72px);
+  background: white;
+  box-shadow: 0 16px 50px rgb(17 19 21 / 10%);
+}
+
+.legal-document__meta {
+  margin-bottom: 38px;
+  color: var(--steel);
+  font-size: 0.9rem;
+}
+
+.legal-document h1 {
+  max-width: none;
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.legal-document h2 {
+  max-width: none;
+  margin: 42px 0 16px;
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.legal-document h3 {
+  margin: 28px 0 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.legal-document p,
+.legal-document li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.legal-document ul {
+  padding-left: 24px;
+}
+
+.legal-document__note {
+  border-left: 4px solid var(--signal);
+  padding: 14px 18px;
+  background: var(--paper);
+}
+
+.legal-back-link {
+  display: inline-block;
+  margin-top: 48px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
 }
 
 @media (max-width: 1080px) {
@@ -1305,6 +1406,20 @@ h3 {
 
   .contact-form {
     padding: 22px 18px;
+  }
+
+  .footer-company-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .legal-main {
+    padding-block: 28px 50px;
+  }
+
+  .legal-document {
+    width: min(calc(100% - 24px), 880px);
+    padding: 34px 20px;
   }
 }
 
