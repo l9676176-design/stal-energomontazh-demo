@@ -5,6 +5,10 @@ const status = document.querySelector("#form-status");
 const companyDialog = document.querySelector("#company-dialog");
 const companyDialogOpen = document.querySelector("[data-company-dialog-open]");
 const companyDialogClose = document.querySelectorAll("[data-company-dialog-close]");
+const consentDialog = document.querySelector("#consent-dialog");
+const consentDialogClose = document.querySelector("[data-consent-dialog-close]");
+const consentCheckbox = document.querySelector("#personal-data-consent");
+const consentDialogStatus = document.querySelector("#consent-dialog-status");
 
 const closeMenu = ({ restoreFocus = false } = {}) => {
   menuButton?.setAttribute("aria-expanded", "false");
@@ -30,8 +34,28 @@ document.addEventListener("keydown", (event) => {
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
-  status.textContent =
-    "Деморежим: заявка не отправлена. Контакты нужно подключить перед публикацией.";
+  consentCheckbox.checked = false;
+  consentDialogStatus.textContent = "";
+  consentDialog?.showModal();
+});
+
+consentCheckbox?.addEventListener("change", () => {
+  if (!consentCheckbox.checked) return;
+
+  consentDialogStatus.textContent = "Согласие подтверждено";
+
+  window.setTimeout(() => {
+    consentDialog?.close();
+    status.textContent =
+      "Согласие подтверждено. Деморежим: заявка не отправлена и данные не сохранены.";
+    form?.reset();
+  }, 450);
+});
+
+consentDialogClose?.addEventListener("click", () => consentDialog?.close());
+
+consentDialog?.addEventListener("click", (event) => {
+  if (event.target === consentDialog) consentDialog.close();
 });
 
 companyDialogOpen?.addEventListener("click", () => {

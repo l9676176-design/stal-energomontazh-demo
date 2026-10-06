@@ -801,6 +801,109 @@ h3 {
   animation: company-dialog-in 180ms ease-out both;
 }
 
+.consent-dialog {
+  width: min(680px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  border: 0;
+  padding: 0;
+  overflow: auto;
+  background: transparent;
+  color: white;
+}
+
+.consent-dialog::backdrop {
+  background: rgb(8 10 12 / 82%);
+  backdrop-filter: blur(5px);
+}
+
+.consent-dialog[open] {
+  animation: company-dialog-in 180ms ease-out both;
+}
+
+.consent-card {
+  position: relative;
+  border: 2px solid var(--signal);
+  padding: clamp(30px, 6vw, 58px);
+  background: var(--ink);
+  box-shadow: 12px 12px 0 rgb(255 196 0 / 18%);
+}
+
+.consent-card h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.consent-dialog__close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(255 255 255 / 28%);
+  padding: 0 0 4px;
+  background: transparent;
+  color: white;
+  font-family: var(--font-body);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.consent-dialog__close:hover,
+.consent-dialog__close:focus-visible {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+
+.consent-checkbox {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-block: 28px 18px;
+  cursor: pointer;
+}
+
+.consent-checkbox input {
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  accent-color: #16844b;
+  cursor: pointer;
+}
+
+.consent-checkbox span {
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.consent-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.consent-card__links a {
+  color: var(--signal);
+  font-size: 0.88rem;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.consent-dialog__status {
+  min-height: 26px;
+  margin: 20px 0 0;
+  color: #63d991;
+  font-weight: 700;
+}
+
+.consent-card__hint {
+  margin: 4px 0 0;
+  color: #aeb2af;
+  font-size: 0.78rem;
+}
+
 .company-card {
   position: relative;
   display: grid;

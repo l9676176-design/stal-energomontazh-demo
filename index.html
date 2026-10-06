@@ -262,5 +262,24 @@
         <button class="company-dialog__dismiss" type="button" data-company-dialog-close>Закрыть</button>
       </div>
     </dialog>
+
+    <dialog id="consent-dialog" class="consent-dialog" aria-labelledby="consent-dialog-title">
+      <div class="consent-card">
+        <button class="consent-dialog__close" type="button" aria-label="Закрыть окно согласия" data-consent-dialog-close>×</button>
+        <p class="eyebrow">Перед отправкой формы</p>
+        <h2 id="consent-dialog-title">Подтвердите согласие</h2>
+        <p>Чтобы отправить обращение, подтвердите согласие на обработку персональных данных.</p>
+        <label class="consent-checkbox" for="personal-data-consent">
+          <input id="personal-data-consent" type="checkbox">
+          <span>Я даю согласие на обработку персональных данных</span>
+        </label>
+        <div class="consent-card__links">
+          <a href="personal-data-consent.html" target="_blank" rel="noopener">Текст согласия</a>
+          <a href="privacy-policy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
+        </div>
+        <p id="consent-dialog-status" class="consent-dialog__status" role="status" aria-live="polite"></p>
+        <p class="consent-card__hint">Если закрыть окно без галочки, форма отправлена не будет.</p>
+      </div>
+    </dialog>
   </body>
 </html>
