@@ -948,6 +948,12 @@ h3 {
   margin: 0;
 }
 
+.footer-company {
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+}
+
 .footer-actions {
   display: grid;
   justify-items: end;
