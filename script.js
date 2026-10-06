@@ -2,6 +2,9 @@ const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-nav");
 const form = document.querySelector("#contact-form");
 const status = document.querySelector("#form-status");
+const companyDialog = document.querySelector("#company-dialog");
+const companyDialogOpen = document.querySelector("[data-company-dialog-open]");
+const companyDialogClose = document.querySelectorAll("[data-company-dialog-close]");
 
 const closeMenu = ({ restoreFocus = false } = {}) => {
   menuButton?.setAttribute("aria-expanded", "false");
@@ -29,4 +32,16 @@ form?.addEventListener("submit", (event) => {
   event.preventDefault();
   status.textContent =
     "Деморежим: заявка не отправлена. Контакты нужно подключить перед публикацией.";
+});
+
+companyDialogOpen?.addEventListener("click", () => {
+  companyDialog?.showModal();
+});
+
+companyDialogClose.forEach((button) => {
+  button.addEventListener("click", () => companyDialog?.close());
+});
+
+companyDialog?.addEventListener("click", (event) => {
+  if (event.target === companyDialog) companyDialog.close();
 });

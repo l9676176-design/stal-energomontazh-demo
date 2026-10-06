@@ -208,50 +208,54 @@
         </div>
       </section>
 
-      <section id="company-details" class="section company-details" aria-labelledby="company-details-title">
-        <div class="shell">
-          <div class="company-card">
-            <div class="company-card__heading">
-              <p class="eyebrow">Официальная информация</p>
-              <h2 id="company-details-title">Реквизиты компании</h2>
-              <p class="company-card__name">ИП Савин Евгений Владимирович</p>
-            </div>
-            <dl class="company-card__grid">
-              <div>
-                <dt>ИНН</dt>
-                <dd>280113123514</dd>
-              </div>
-              <div>
-                <dt>ОГРНИП</dt>
-                <dd>323280000005789</dd>
-              </div>
-              <div class="company-card__wide">
-                <dt>Юридический адрес</dt>
-                <dd>676962, Амурская область, Тамбовский район, с. Николаевка, ул. Поселковая, д. 7, кв. 2</dd>
-              </div>
-              <div class="company-card__wide">
-                <dt>Фактический адрес</dt>
-                <dd>675000, Амурская область, г. Благовещенск, ул. Калинина, д. 126, литер А, офис 27</dd>
-              </div>
-              <div>
-                <dt>Телефон</dt>
-                <dd><a href="tel:+79246716001">+7 924 671-60-01</a></dd>
-              </div>
-              <div>
-                <dt>Электронная почта</dt>
-                <dd><a href="mailto:dvspecmontazh@mail.ru">dvspecmontazh@mail.ru</a></dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-layout">
         <p><strong>СтальЭнергоМонтаж</strong><br>Благовещенск · Амурская область</p>
-        <p>Демонстрационная версия · Контакты и услуги требуют подтверждения</p>
+        <div class="footer-actions">
+          <button class="company-details-button" type="button" data-company-dialog-open>Реквизиты компании</button>
+          <p>Демонстрационная версия · Контакты и услуги требуют подтверждения</p>
+        </div>
       </div>
     </footer>
+
+    <dialog id="company-dialog" class="company-dialog" aria-labelledby="company-details-title">
+      <div class="company-card">
+        <button class="company-dialog__close" type="button" aria-label="Закрыть реквизиты" data-company-dialog-close>×</button>
+        <div class="company-card__heading">
+          <p class="eyebrow">Официальная информация</p>
+          <h2 id="company-details-title">Реквизиты компании</h2>
+          <p class="company-card__name">ИП Савин Евгений Владимирович</p>
+        </div>
+        <dl class="company-card__grid">
+          <div>
+            <dt>ИНН</dt>
+            <dd>280113123514</dd>
+          </div>
+          <div>
+            <dt>ОГРНИП</dt>
+            <dd>323280000005789</dd>
+          </div>
+          <div class="company-card__wide">
+            <dt>Юридический адрес</dt>
+            <dd>676962, Амурская область, Тамбовский район, с. Николаевка, ул. Поселковая, д. 7, кв. 2</dd>
+          </div>
+          <div class="company-card__wide">
+            <dt>Фактический адрес</dt>
+            <dd>675000, Амурская область, г. Благовещенск, ул. Калинина, д. 126, литер А, офис 27</dd>
+          </div>
+          <div>
+            <dt>Телефон</dt>
+            <dd><a href="tel:+79246716001">+7 924 671-60-01</a></dd>
+          </div>
+          <div>
+            <dt>Электронная почта</dt>
+            <dd><a href="mailto:dvspecmontazh@mail.ru">dvspecmontazh@mail.ru</a></dd>
+          </div>
+        </dl>
+        <button class="company-dialog__dismiss" type="button" data-company-dialog-close>Закрыть</button>
+      </div>
+    </dialog>
   </body>
 </html>
