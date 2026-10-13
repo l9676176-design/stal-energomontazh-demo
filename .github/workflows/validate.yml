@@ -1,0 +1,22 @@
+name: Проверка проекта
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить файлы
+        uses: actions/checkout@v4
+      - name: Подключить Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Проверить структуру и ссылки
+        run: ./scripts/test.sh

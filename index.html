@@ -27,8 +27,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&amp;family=Russo+One&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <script src="src/scripts/script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">К основному содержанию</a>
@@ -36,7 +36,7 @@
     <header class="site-header">
       <div class="header-shell">
         <a class="brand" href="index.html" aria-label="СтальЭнергоМонтаж, главная">
-          <img class="brand-mark" src="assets/sem-products-yellow-frame.png" alt="" aria-hidden="true">
+          <img class="brand-mark" src="public/images/site/sem-products-yellow-frame.png" alt="" aria-hidden="true">
           <span class="brand-name">Сталь<span>Энерго</span>Монтаж</span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -56,7 +56,7 @@
 
     <main id="content">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/work-boiler-room.png" alt="Два промышленных котла и система трубопроводов в котельной">
+        <img class="hero-image" src="public/images/site/work-boiler-room.png" alt="Два промышленных котла и система трубопроводов в котельной">
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="shell hero-content">
           <p class="eyebrow">Благовещенск · Амурская область</p>
@@ -115,15 +115,15 @@
           </div>
           <div class="project-grid">
             <figure class="project-card project-card--tall">
-              <img src="assets/work-piping.png" alt="Трубопроводы, насосы и запорная арматура в промышленной котельной" loading="lazy">
+              <img src="public/images/site/work-piping.png" alt="Трубопроводы, насосы и запорная арматура в промышленной котельной" loading="lazy">
               <figcaption><span>Монтаж</span>Обвязка промышленной котельной</figcaption>
             </figure>
             <figure class="project-card">
-              <img src="assets/work-boiler-close.png" alt="Крупный промышленный котёл, установленный в котельном помещении" loading="lazy">
+              <img src="public/images/site/work-boiler-close.png" alt="Крупный промышленный котёл, установленный в котельном помещении" loading="lazy">
               <figcaption><span>Оборудование</span>Установка котельного оборудования</figcaption>
             </figure>
             <figure class="project-card">
-              <img src="assets/work-boiler-room.png" alt="Общий вид котельной с двумя котлами и верхней трубной разводкой" loading="lazy">
+              <img src="public/images/site/work-boiler-room.png" alt="Общий вид котельной с двумя котлами и верхней трубной разводкой" loading="lazy">
               <figcaption><span>Котельная</span>Комплекс оборудования и трубопроводов</figcaption>
             </figure>
           </div>
@@ -216,7 +216,7 @@
           <p><strong>СтальЭнергоМонтаж</strong><br>Благовещенск · Амурская область</p>
           <div class="footer-company-links">
             <button class="company-details-button" type="button" data-company-dialog-open>Реквизиты компании</button>
-            <a class="privacy-policy-link" href="privacy-policy.html">Политика конфиденциальности</a>
+            <a class="privacy-policy-link" href="legal/privacy-policy.html">Политика конфиденциальности</a>
           </div>
         </div>
         <div class="footer-actions">
@@ -274,8 +274,8 @@
           <span>Я даю согласие на обработку персональных данных</span>
         </label>
         <div class="consent-card__links">
-          <a href="personal-data-consent.html" target="_blank" rel="noopener">Текст согласия</a>
-          <a href="privacy-policy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          <a href="legal/personal-data-consent.html" target="_blank" rel="noopener">Текст согласия</a>
+          <a href="legal/privacy-policy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
         </div>
         <p id="consent-dialog-status" class="consent-dialog__status" role="status" aria-live="polite"></p>
         <p class="consent-card__hint">Если закрыть окно без галочки, форма отправлена не будет.</p>
